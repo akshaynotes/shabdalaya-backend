@@ -12,6 +12,6 @@ public class TestController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String Welcome() {
-        return "Hi There, welcome to the world of springboot";
+        return "Testing CI/CD";
     }
 }
