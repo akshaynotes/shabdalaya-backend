@@ -22,3 +22,6 @@ jobs:
 
       - name: Heroku Deploy
         run: git push heroku HEAD:master -f
+
+      - name: Deployed
+        run: echo https://shabdalaya-backend.herokuapp.com/
