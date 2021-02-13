@@ -13,3 +13,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
+      - name: Compile the app
+        run: mvn clean compile
+
+      - name: Heroku add remote origin
+        run: git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
+
+      - name: Heroku Deploy
+        run: git push heroku HEAD:master -f
